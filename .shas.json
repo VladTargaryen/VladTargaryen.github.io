@@ -1,0 +1,31 @@
+[
+  {
+    "type": "::map::minify",
+    "inputSha": [
+      {
+        "file": "index.html",
+        "sha": "9de8983c1646a7bfb22973a2c0ccab27b7f1432c"
+      }
+    ],
+    "outputSha": "6665ed2d9bbd07998f0d18b9d17f65fc97ff6af8",
+    "input": "index.html",
+    "output": [
+      "index.html"
+    ]
+  },
+  {
+    "type": "node-sass@4.10.0::map::minify",
+    "inputSha": [
+      {
+        "file": "styles/main.scss",
+        "sha": "5c070f7daff572dcbdf41fe3d74d699d8ed2b808"
+      }
+    ],
+    "outputSha": "1da688a4b8f6e8aa65ecb5655ae92e9f456685d6",
+    "input": "styles/main.scss",
+    "output": [
+      "styles/main.css.map",
+      "styles/main.css"
+    ]
+  }
+]
