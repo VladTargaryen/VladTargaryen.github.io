@@ -1,71 +1,93 @@
-$(document).ready(function () {
-	const topBtn = document.querySelector(".navigation__btn--top");
-	const botBtn = document.querySelector(".navigation__btn--bot");
-	const outPut = document.querySelector(".navigation__output");
-	let mainOrderValue = 1;
+document.addEventListener("DOMContentLoaded", function(){
 
-	function setDataAttr(value) {
-		topBtn.setAttribute("data-anchor", `#root_${value}`);
-		botBtn.setAttribute("data-anchor", `#root_${value}`);
+	const navigation = {
+		topBtn: document.querySelector(".navigation__btn--top"),
+		botBtn: document.querySelector(".navigation__btn--bot"),
+		outPut: document.querySelector(".navigation__output"),
+		mainOrderValue: 1,
+		setDataAttr() {
+			this.topBtn.setAttribute("data-anchor", `#root_${this.mainOrderValue}`);
+			this.botBtn.setAttribute("data-anchor", `#root_${this.mainOrderValue}`);
 
-		if(value === 1) {
-			topBtn.classList.add('navigation__btn--js-disable');
-		} else {
-			topBtn.classList.remove('navigation__btn--js-disable');
-		}
+			this.addDisabledClass(this.mainOrderValue);
 
-		if(value === 10) {
-			botBtn.classList.add('navigation__btn--js-disable');
-		} else {
-			botBtn.classList.remove('navigation__btn--js-disable');
-		}
-
-
-		outPut.innerHTML = value;
-		console.log(value);
-		return value;
-	}
-
-	setDataAttr(mainOrderValue);
-
-	$("#navigation").on("click", "button", function(event) {
-
-		//отменяем стандартную обработку нажатия по ссылке
-		event.preventDefault();
-
-		if(event.target.classList.contains("navigation__btn--top")){
-			// не гибкий примитив
-			if(mainOrderValue !== 1){
-				mainOrderValue--;
+			//вынести
+			this.outPut.querySelector('.test').innerHTML = this.mainOrderValue;
+		},
+		addDisabledClass(order) {
+			if(order === 1) {
+				this.topBtn.classList.add('navigation__btn--js-disable');
+				this.topBtn.disabled = true;
+			} else {
+				this.topBtn.classList.remove('navigation__btn--js-disable');
+				this.topBtn.disabled = false;
 			}
-			setDataAttr(mainOrderValue);
-		}
 
-		if(event.target.classList.contains("navigation__btn--bot")){
-			// не гибкий примитив
-			if(mainOrderValue !== 10){
-				mainOrderValue++;
+			if(order === 10) {
+				this.botBtn.classList.add('navigation__btn--js-disable');
+				this.botBtn.disabled = true;
+				this.outPut.querySelector('.test1').style.display = "none";
+			} else {
+				this.botBtn.classList.remove('navigation__btn--js-disable');
+				this.botBtn.disabled = false;
 			}
-			setDataAttr(mainOrderValue);
+		},
+
+	};
+
+	navigation.setDataAttr();
+
+	navigation.topBtn.addEventListener('click', e => {
+		e.preventDefault();
+		if(navigation.mainOrderValue !== 1){
+			navigation.mainOrderValue--;
 		}
-
-		//забираем идентификатор бока с атрибута href
-		let id = $(this).attr('data-anchor');
-
-		//узнаем высоту от начала страницы до блока на который ссылается якорь
+		navigation.setDataAttr();
+		let id = e.target.getAttribute("data-anchor");
+		// JQ (заменить)
 		let	top = $(id).offset().top;
-
-		//анимируем переход на расстояние - top за 1500 мс
 		$('body,html').animate({ scrollTop: top }, 1000);
+
 	});
+
+	navigation.botBtn.addEventListener('click', e => {
+		e.preventDefault();
+		if(navigation.mainOrderValue !== 10){
+			navigation.mainOrderValue++;
+		}
+		navigation.setDataAttr();
+		let id = e.target.getAttribute("data-anchor");
+		// JQ (заменить)
+		let	top = $(id).offset().top;
+		$('body,html').animate({ scrollTop: top }, 1000);
+
+	});
+
+	//=====
+	// первый эл
+	// let firstBlock = document.getElementById('root_1');
+	// // 680рх
+	// let winDef = document.documentElement.clientHeight;
+
+	// window.addEventListener('scroll', e => {
+	// 	console.log(winDef);
+	// 	// минус пиксели за верхний край
+	// 	let scrollH = firstBlock.getBoundingClientRect().top;
+	// 	console.error(scrollH);
+	// 	let diff = Math.ceil(scrollH*(-1)/winDef);
+	// 	console.log(diff);
+
+	// 	if(Math.abs(diff - navigation.mainOrderValue) >= 1) {
+	// 		navigation.mainOrderValue = diff;
+	// 		navigation.setDataAttr();
+	// 	}
+	// });
+	//=====
 
 	// burger+menu
 	$('.header__burger').on('click', e => {
 		console.log(e);
 		$('.wrapper').toggleClass("wrapper--js-active");
 	});
-
-	// slider-arrows
-
 
 });

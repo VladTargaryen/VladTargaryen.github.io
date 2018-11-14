@@ -73,7 +73,8 @@ button {
 	}
 
 	&__burger {
-		width: 50px;
+		// width: 50px;
+		width: 10%;
 		position: absolute;
 		right: 0;
 		top: 0;
@@ -166,8 +167,9 @@ button {
 	width: 100px;
 	position: fixed;
 	left: 4%;
-	top: 50%;
-	transform: translateY(-50%);
+	top: 22%;
+	// top: 50%;
+	// transform: translateY(-50%);
 	z-index: 100;
 
 	&__btn {
@@ -178,6 +180,9 @@ button {
 		font-size: 5rem;
 		cursor: pointer;
 
+		background: url(../img/green_down.png) no-repeat center center;
+		height: 43px;
+
 		&--top {
 			transform: rotateZ(180deg);
 		}
@@ -185,25 +190,29 @@ button {
 		&--js-disable {
 			color: gray;
 			cursor: default;
+			background: url(../img/grey_down.png) no-repeat center center;
 		}
 	}
 
 	&__output {
-		color: yellow;
+		color: #173316;
 		font-size: 40px;
 		font-weight: bold;
 		text-align: center;
 		padding: .5rem 0;
 		position: relative;
 
+		display: flex;
+		justify-content: center;
+
 		&:after {
-			content: " / 10";
+			content: "10";
 			display: block;
 			position: absolute;
 			right: 5px;
-			top: 20px;
+			top: 10px;
 			font-size: 16px;
-			color: orange;
+			color: #bbd911;
 		}
 	}
 }
