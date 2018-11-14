@@ -197,18 +197,30 @@ button {
 		font-size: 5rem;
 		cursor: pointer;
 
-		background: url(../img/green_down.png) no-repeat center center;
 		height: 43px;
 
 		&--top {
 			transform: rotateZ(180deg);
+			background: url(../img/green_down.png) no-repeat 63px center;
+
+		}
+
+		&--bot {
+			background: url(../img/green_down.png) no-repeat 18px center;
 		}
 
 		&--js-disable {
 			color: gray;
 			cursor: default;
-			background: url(../img/grey_down.png) no-repeat center center;
 		}
+	}
+
+	.navigation__btn--top.navigation__btn--js-disable {
+		background: url(../img/grey_down.png) no-repeat 63px center;
+	}
+
+	.navigation__btn--bot.navigation__btn--js-disable {
+		background: url(../img/grey_down.png) no-repeat 18px center;
 	}
 
 	&__output {
@@ -216,7 +228,7 @@ button {
 		font-size: 40px;
 		// font-weight: bold;
 		text-align: center;
-		padding: .5rem 0;
+		padding: 2.5rem 0;
 		position: relative;
 
 		display: flex;
@@ -226,8 +238,8 @@ button {
 			content: "10";
 			display: block;
 			position: absolute;
-			right: 5px;
-			top: 10px;
+			right: -5px;
+			top: 44px;
 			font-size: 16px;
 			color: #d9a74f;
 		}
