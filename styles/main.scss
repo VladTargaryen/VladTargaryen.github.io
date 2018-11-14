@@ -41,6 +41,10 @@ button {
 		.navigation {
 			display: none;
 		}
+
+		.footer {
+			display: none;
+		}
 	}
 }
 //=======================================================================================//
@@ -70,6 +74,8 @@ button {
 		left: 0;
 		right: 0;
 		visibility: hidden;
+
+		background-color: #eee;
 	}
 
 	&__burger {
@@ -172,6 +178,8 @@ button {
 	// transform: translateY(-50%);
 	z-index: 100;
 
+	font-family: 'Roboto', sans-serif;
+
 	&__btn {
 		display: block;
 		color: green;
@@ -195,9 +203,9 @@ button {
 	}
 
 	&__output {
-		color: #173316;
+		color: #004539;
 		font-size: 40px;
-		font-weight: bold;
+		// font-weight: bold;
 		text-align: center;
 		padding: .5rem 0;
 		position: relative;
@@ -212,7 +220,7 @@ button {
 			right: 5px;
 			top: 10px;
 			font-size: 16px;
-			color: #bbd911;
+			color: #d9a74f;
 		}
 	}
 }
