@@ -7,11 +7,12 @@ document.addEventListener("DOMContentLoaded", function(){
 	let toolsH = $('.content__tools').height();
 	const out = document.querySelector('.controller__output');
 
+	const slider = document.querySelector('.slider');
 	const items = document.querySelectorAll('.slider__slide');
 	let dataIndex = 0;
 	let translateValue = 0;
 	// ==
-	let blockH = $('.slider__item-1').height();
+	// let blockH = slider.offsetHeight;
 
 	out.innerText = `0${dataIndex+1}`;
 
@@ -38,9 +39,10 @@ document.addEventListener("DOMContentLoaded", function(){
 
 	checkState();
 
+
 	nextBtn.addEventListener('click', function(){
 		// translateValue += 480;
-		translateValue += blockH;
+		translateValue += slider.offsetHeight;
 
 		items.forEach((elem, id) => {
 			let x = id === dataIndex ? translateValue + toolsH : translateValue;
@@ -62,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
 	prevBtn.addEventListener('click', function(){
 		// translateValue -= 480;
-		translateValue -= blockH;
+		translateValue -= slider.offsetHeight;
 
 		items.forEach((elem, id) => {
 			let x = id-1 === dataIndex ? translateValue + tools.offsetHeight : translateValue;

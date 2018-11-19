@@ -116,8 +116,10 @@ button {
 		bottom: 0;
 		z-index: 200;
 		display: none;
-		background: url(../img/menu1.png) no-repeat center;
-		background-size: cover;
+		// background: url(../img/menu1.png) no-repeat center;
+		// background-size: cover;
+		width: 100%;
+		max-width: 100%;
 }
 
 .menu {
@@ -125,6 +127,8 @@ button {
 
 	img {
 		height: 100%;
+		width: 100%;
+		max-width: 100%;
 	}
 }
 
@@ -134,6 +138,8 @@ button {
 
 	img {
 		height: 100%;
+		width: 100%;
+		max-width: 100%;
 	}
 
 	&__controller {
