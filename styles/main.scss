@@ -97,7 +97,9 @@ button {
 
 	&__content {
 		flex-grow: 1;
-		flex-basis: 50%;
+		// flex-basis: 50%;
+		// flex-basis: 60%;
+		flex-basis: 80%;
 	}
 
 	&.show-menu {
@@ -116,10 +118,13 @@ button {
 		bottom: 0;
 		z-index: 200;
 		display: none;
-		// background: url(../img/menu1.png) no-repeat center;
-		// background-size: cover;
-		width: 100%;
-		max-width: 100%;
+		background: url(../img/menu1.png) no-repeat;
+		background-size: auto 100%;
+		background-position: top left;
+		// img {
+		// 	width: 100%;
+		// 	max-width: 100%;
+		// }
 }
 
 .menu {
@@ -133,7 +138,7 @@ button {
 }
 
 .nav-panel {
-	background-color: green;
+	// background-color: green;
 	position: relative;
 
 	img {
@@ -239,10 +244,17 @@ button {
 		// overflow: hidden;
 		height: 100%;
 		// transition: transform 1s ease-in-out .2s;
+		padding: 3px 0;
 
 		div {
 			// transition: transform 1s ease-in-out;
 			height: 100%;
+
+			// position: absolute;
+			// top: 0;
+			// bottom: 0;
+			// left: -97px;
+			// right: 0;
 		}
 	}
 
