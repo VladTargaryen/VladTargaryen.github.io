@@ -1,0 +1,138 @@
+.top-spacer {
+    width: 1020px;
+    height: 150px;
+    margin: 0px auto;
+    position: relative;
+}
+.top-spacer-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+}
+.branding-layout .row-banner-top {
+    margin-top: 0px;
+}
+.branding-layout .row-banner-top .row-cont {
+    padding: 0;
+}
+.branding-layout .row-banner-top .banner.banner-branding {
+    margin: 0;
+    display: block;
+    left: -40px;
+    width: 1020px;
+}
+.branding-layout .row-banner-top .l-block-inline {
+    display: block;
+}
+/* Футер */
+/* Футер-закончился */
+/* Топ-лого */
+.top-spacer-link {
+    background: #eee;
+    z-index: 100;
+}
+/* Топ-лого закончился*/
+/* Задний фон */
+.branding-layout .row.header .row-cont:before, .branding-layout .row.header .row-cont:after {
+    margin-top: 0px;
+}
+.page-content {
+    /* background: #eee !important; */
+    /* background: url('https://cdn.the-village.ru/the-village.ru/post_image-image/pSL9qgDNNv20IfVHFK8YLg.png') 50% 83px no-repeat #f2f2f2 !important; */
+    background-size: 1920px !important;
+    padding-top: 0;
+    position: relative;
+}
+/* Широкие блоки */
+.stk-post {
+    overflow-x: visible !important;
+    background: transparent !important;
+}
+.stk-code {
+    overflow: visible !important;
+}
+:not(.mobile):not(.tablet).wide .post-row .row-cont {
+    overflow: visible;
+}
+:not(.mobile):not(.tablet).wide .fk-post-wide {
+    width: 100vw;
+    position: relative;
+    left: calc((-100vw + 940px)/2);
+    min-width: 1020px;
+}
+@media (max-width: 1020px) {
+    :not(.mobile):not(.tablet).wide .fk-post-wide {
+        left: -40px;
+   }
+}
+:not(.mobile):not(.tablet).wide .fk-post-wide-inner {
+    position: relative;
+    width: 940px;
+    margin: 0 auto;
+}
+:not(.mobile):not(.tablet).wide .fk-post-wide-inner .stk-grid-col {
+    max-width: none !important;
+}
+.mobile .fk-post-wide {
+    width: 320px !important;
+    position: static;
+    margin-left: -10px;
+    transform: none;
+}
+.mobile .fk-post-wide-inner {
+    width: 300px !important;
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+}
+/* Прозрачная подложка */
+.page-holder {
+    box-shadow: none !important;
+}
+.row.post-cover-row, .row.post-body {
+    background: transparent;
+}
+.stk-theme_village-2016 {
+    background: transparent;
+}
+/* Прозрачное дупло для кавера */
+.post-cover {
+    background: transparent !important;
+}
+/* Имитаторы баннеров и пр. */
+.fake-banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 24px;
+}
+.fake-banner__300x500 {
+    width: 300px;
+    height: 500px;
+    background: #ccc;
+}
+.fake-banner__cover-image {
+    width: 620px;
+    height: 620px;
+    background: #ccc;
+}
+.fake-banner__320x250 {
+    position: relative;
+    left: -10px;
+    width: 320px;
+    height: 250px;
+}
+.top-spacer-link {
+    width: 990px;
+    height: 90px;
+    background: #ccc;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+/* https://cdn.the-village.ru/specials.lookatme.ru/0000000001/banners/system/the-village.ru/branding/infiniti/fonts/ */

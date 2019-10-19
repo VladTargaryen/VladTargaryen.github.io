@@ -1,19 +1,30 @@
 {
-	"name": "fuck",
-	"version": "1.0.0",
-	"description": "",
-	"main": "index.js",
-	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1",
-		"start": "pingy dev",
-		"export": "pingy export"
-	},
-	"keywords": [],
-	"author": "",
-	"license": "ISC",
-	"dependencies": {},
-	"devDependencies": {
-		"node-sass": "^4",
-		"@pingy/cli": "^0.13.0"
-	}
+  "name": "basebuild",
+  "version": "1.0.0",
+  "description": "FreeLance",
+  "main": "js.js",
+  "dependencies": {},
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "del": "^5.0.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-group-css-media-queries": "^1.2.2",
+    "gulp-if": "^3.0.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "gulp"
+  },
+  "keywords": [
+    "TheWillage"
+  ],
+  "author": "shokhin",
+  "license": "ISC"
 }

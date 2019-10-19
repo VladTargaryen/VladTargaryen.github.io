@@ -1,0 +1,59 @@
+// sizes
+$w-small: 640px;
+
+// colors
+$color-white: #fff;
+$color-black: #000000;
+
+$blue-violet: #8233FF;
+$nero: #202020;
+$ruby: #c5195a;
+$night-ride: #2B2B2B;
+
+$summer-sky: #27B8FF;
+$deep-sky-blue: #24B7FF;
+
+$white-smoke: #F5F5F5;
+
+$shamrock: #22D1AC;
+$persian-green: #00A88E;
+$gossamer: #4EA58F;
+$matterhorn: #4D4D4D;
+// color class
+
+//BG color class
+.bg--white {
+	background-color: $color-white;
+}
+
+.bg--blue-violet {
+	background-color: $blue-violet;
+}
+
+.bg--nero {
+	background-color: $nero;
+}
+
+.bg--ruby {
+	background-color: $ruby;
+}
+
+.bg--shamrock {
+	background-color: $shamrock;
+}
+
+.bg--night-ride {
+	background-color: $night-ride;
+}
+
+.bg--summer-sky {
+	background-color: $summer-sky;
+}
+
+.bg--white-smoke {
+	background-color: $white-smoke;
+}
+
+.bg--persian-green {
+	background-color: $persian-green;
+}
