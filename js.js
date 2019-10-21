@@ -32,10 +32,19 @@ document.addEventListener('DOMContentLoaded', function() {
 				//   // время интервала равняется частному от времени анимации и к-ва кадров
 				// }, animationTime / framesCount);
 
-				tearget.scrollIntoView({
-					behavior: "smooth",
-					block:    "start"
-				 });
+				let coordY = tearget.getBoundingClientRect().top + window.pageYOffset;
+				console.warn($(tearget).offset().top);
+				console.log(window.pageYOffset);
+				console.log(tearget.getBoundingClientRect().top);
+
+				$('body,html').animate({
+					scrollTop: coordY
+				}, 1600);
+
+				// tearget.scrollIntoView({
+				// 	behavior: "smooth",
+				// 	block:    "start"
+				// });
 			});
 		});
 	}

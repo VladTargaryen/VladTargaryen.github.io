@@ -17,11 +17,11 @@ const paths = {
 	src: "./src/css.scss",
 	dist: "./",
 	watchS: "./src/*.scss",
-	watchH: "./src/index.html"
+	watchH: "./src/*.html"
 }
 
 gulp.task('clean', function () {
-	return del(['./css.css', './index.html']);
+	return del(['./css.css', './index.html', './mobile.html']);
 });
 
 
@@ -51,7 +51,9 @@ gulp.task('index', function () {
 gulp.task('browserSync', function(done) {
 	browsersync.init({
 		server: {
-			baseDir: "./"
+			baseDir: "./",
+			// index: "index.html"
+			index: "mobile.html"
 		},
 		port: 8080,
 		open: true
